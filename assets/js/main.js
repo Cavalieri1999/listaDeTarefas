@@ -24,7 +24,9 @@ function limpaInput() {
 }
 
 btnTarefa.addEventListener('click', function () {
-  if (!inputTarefa.value) return
+  if (!inputTarefa.value) {
+    alert ("Insira uma tarefa no campo de tarefas")
+  }
   criaTarefa(inputTarefa.value)
 });
 
