@@ -30,7 +30,6 @@ function limpaInput() {
 
 btnTarefa.addEventListener('click', function () {
   criaTarefa(inputTarefa.value)
-
 });
 
 inputTarefa.addEventListener('keypress', function (e) {
