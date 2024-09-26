@@ -9,27 +9,25 @@ function criaLi() {
 }
 
 function criaTarefa(textoInput) {
-  if (inputTarefa.value === "") {
-    alert('Insira uma tarefa no campo de tarefas')
-  }
-  else {
-    const li = criaLi();
-    li.innerHTML = textoInput;
-    tarefas.appendChild(li);
-    limpaInput();
-    botaoApagar(li);
-    salvaTarefas();
-  }
+  const li = criaLi();
+  li.innerHTML = textoInput;
+  tarefas.appendChild(li);
+  limpaInput();
+  botaoApagar(li);
+  salvaTarefas();
+
 }
-
-
 function limpaInput() {
   inputTarefa.value = '';
   inputTarefa.focus();
 }
-
 btnTarefa.addEventListener('click', function () {
-  criaTarefa(inputTarefa.value)
+  if (!inputTarefa.value === "") {
+    criaTarefa(inputTarefa.value)
+  }
+  else{
+    alert ('Insira uma tarefa no campo de tarefas')
+  }
 });
 
 inputTarefa.addEventListener('keypress', function (e) {
@@ -62,7 +60,7 @@ function salvaTarefas() {
   for (let tarefa of liTarefas) {
     let tarefaTexto = tarefa.innerText;
     tarefaTexto = tarefaTexto.replace('Apagar', ' ')
-    listaDeTarefas.push(tarefaTexto); 4
+    listaDeTarefas.push(tarefaTexto);
   }
 
   const tarefasJson = JSON.stringify(listaDeTarefas);
@@ -77,4 +75,5 @@ function adcionaTarefasSalvas() {
     criaTarefa(tarefa)
   }
 }
+
 adcionaTarefasSalvas();
