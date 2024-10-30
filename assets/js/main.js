@@ -22,7 +22,7 @@ function limpaInput() {
   inputTarefa.focus();
 }
 btnTarefa.addEventListener('click', function () {
-  if (!inputTarefa.value === "") {
+  if (inputTarefa.value != "") {
     criaTarefa(inputTarefa.value)
   }
   else{
@@ -32,7 +32,12 @@ btnTarefa.addEventListener('click', function () {
 
 inputTarefa.addEventListener('keypress', function (e) {
   if (e.keyCode === 13) {
-    criaTarefa(inputTarefa.value)
+    if (inputTarefa.value != "") {
+      criaTarefa(inputTarefa.value)
+    }
+    else{
+      alert ('Insira uma tarefa no campo de tarefas')
+    }
   }
 });
 
