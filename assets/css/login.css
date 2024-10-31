@@ -28,17 +28,17 @@ label{
     margin: 1%;
 }
 section{
-    border: solid; 
+    /* border: solid;  */
     width: 20%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 5%;
+    padding: 1% 1% 0 1%;
     display: flex;
     flex-direction: column;
     justify-content: center; 
-    background-color: rgb(82, 110, 116);
+    background-color: rgba(255, 255, 255, 0.308);
 }
 #username,
 #pass{
@@ -52,4 +52,41 @@ form{
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+.checkbox{
+    margin-left: 20%;
+}
+.btn{
+    width: 20%;
+    background-color: cyan;
+    outline: none;
+    border: none;
+    height: 3vh;
+    margin: 2% 2%;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+    bottom: 0;
+}
+.cadastre{
+    width: 45%;
+    padding: 0 1%;
+    font-size: 0.9em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin: 2% 2%;
+}
+.btns{
+    margin: 15% 15% 0 15%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.btn:hover{
+    background-color: rgba(0, 255, 255, 0.479);
+}
+form{
+    /* border: solid; */
+    bottom: 0;
 }
